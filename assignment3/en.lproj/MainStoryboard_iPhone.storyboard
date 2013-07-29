@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KXD-hl-Cmc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cjf-II-4FQ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="KXD-hl-Cmc" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xC7-Zn-v5Z">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="efP-1M-IYe" kind="relationship" relationship="rootViewController" id="GRD-pS-R7U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGA-WH-TTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="-222"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Wwr-En-diE">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="efP-1M-IYe" customClass="HomeViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="uu5-se-Ixx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u79-dJ-jUX">
+                            <size key="itemSize" width="296" height="332"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CustomizedCell" reuseIdentifier="CustomizedCell" id="xny-cX-gfy" customClass="CustomizedCell">
+                                <rect key="frame" x="12" y="0.0" width="296" height="332"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="296" height="332"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bl-dh-wsU">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="66" id="4IC-HC-UkP"/>
+                                                <constraint firstAttribute="width" constant="73" id="GlO-w0-uc3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" backgroundImage="refresh.png">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="refreshData:" destination="efP-1M-IYe" eventType="touchUpInside" id="ZRq-UQ-nUZ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsQ-Er-Hc2">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="79" id="Eeg-zJ-GNE"/>
+                                                <constraint firstAttribute="height" constant="67" id="t0M-Gy-s8k"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" backgroundImage="delete.png">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deleteImage:" destination="efP-1M-IYe" eventType="touchUpInside" id="xUW-hU-n4S"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" restorationIdentifier="" translatesAutoresizingMaskIntoConstraints="NO" id="toK-hG-Zht">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="305" id="4Ga-dy-cIe"/>
+                                                <constraint firstAttribute="height" constant="305" id="jKI-A2-gGc"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="toK-hG-Zht" firstAttribute="centerX" secondItem="xny-cX-gfy" secondAttribute="centerX" type="default" id="5vQ-Dv-eJJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="RsQ-Er-Hc2" secondAttribute="trailing" constant="41" id="CHU-IB-SNO"/>
+                                    <constraint firstItem="RsQ-Er-Hc2" firstAttribute="bottom" secondItem="7Bl-dh-wsU" secondAttribute="bottom" type="default" id="ES6-Jp-LUL"/>
+                                    <constraint firstItem="7Bl-dh-wsU" firstAttribute="leading" secondItem="xny-cX-gfy" secondAttribute="leading" constant="56" id="TTd-d0-6yV"/>
+                                    <constraint firstItem="RsQ-Er-Hc2" firstAttribute="top" secondItem="xny-cX-gfy" secondAttribute="top" constant="143" id="ao0-oE-LwE"/>
+                                    <constraint firstItem="toK-hG-Zht" firstAttribute="top" secondItem="xny-cX-gfy" secondAttribute="top" constant="13" id="avh-LT-lhT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="UserImageView" destination="toK-hG-Zht" id="VJu-Vl-Kkd"/>
+                                    <outlet property="deleteButton" destination="RsQ-Er-Hc2" id="Gcy-hb-S8h"/>
+                                    <outlet property="refreshButton" destination="7Bl-dh-wsU" id="LIj-zW-qTw"/>
+                                    <segue destination="utA-jM-Cjq" kind="push" identifier="DetailViewSegue" id="0MA-Un-QR2"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="efP-1M-IYe" id="l5W-yP-e7B"/>
+                            <outlet property="delegate" destination="efP-1M-IYe" id="i41-Lq-2uP"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="cxL-vJ-JCc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="zQw-Ao-dhF">
+                            <connections>
+                                <action selector="addImage:" destination="efP-1M-IYe" id="KR2-pQ-hHB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="SdC-rJ-AcG">
+                            <connections>
+                                <action selector="getInstruction:" destination="efP-1M-IYe" id="Nf9-ow-beF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btl-gI-RQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176" y="-218"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="KtI-gk-u9r">
+            <objects>
+                <viewController id="utA-jM-Cjq" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T1b-CW-Gms">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-My-L8Y">
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="9m9-8v-hLd"/>
+                                    <constraint firstAttribute="width" constant="305" id="SJE-q2-fUA"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8zK-PK-nxe" appends="YES" id="uSR-Av-JHl"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg8-wE-zVK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="dYC-b4-xfI"/>
+                                    <constraint firstAttribute="height" constant="29" id="jpB-uG-ggI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSomething:" destination="utA-jM-Cjq" eventType="touchUpInside" id="e92-di-eny"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Fg8-wE-zVK" firstAttribute="top" secondItem="T1b-CW-Gms" secondAttribute="top" type="default" id="ACs-Kq-u5G"/>
+                            <constraint firstItem="2ze-My-L8Y" firstAttribute="top" secondItem="T1b-CW-Gms" secondAttribute="top" constant="29" id="IGV-Hb-afG"/>
+                            <constraint firstItem="Fg8-wE-zVK" firstAttribute="trailing" secondItem="T1b-CW-Gms" secondAttribute="trailing" type="default" id="NWy-b0-0ol"/>
+                            <constraint firstItem="2ze-My-L8Y" firstAttribute="centerX" secondItem="T1b-CW-Gms" secondAttribute="centerX" type="default" id="Tma-IS-2nf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BF8-Sk-4JJ">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="addButton" destination="Fg8-wE-zVK" id="jup-lU-cxu"/>
+                        <outlet property="targetImage" destination="2ze-My-L8Y" id="kqK-cD-DY9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mak-Em-VNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8zK-PK-nxe">
+                    <connections>
+                        <action selector="tagToAddImage:" destination="utA-jM-Cjq" id="C63-Wo-6fE"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="648" y="-218"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete.png" width="245" height="206"/>
+        <image name="refresh.png" width="197" height="176"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
