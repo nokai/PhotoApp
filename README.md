@@ -16,8 +16,10 @@ Implementatin:
 
 2. Customized button set with better user experience.
 
-3. Implement paintView which alow usr draw on targetImage 
+3. Customerized Instruction view
 
-4. Use Parse as server to store users photos
+4. Implement paintView which alow usr draw on targetImage 
 
-5. Include share option i.e. Facebook
+5. Use Parse as server to store users photos
+
+6. Include share option i.e. Facebook
